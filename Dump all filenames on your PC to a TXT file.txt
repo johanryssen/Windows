@@ -1,0 +1,2 @@
+Dump all filenames on your PC to a TXT file:
+dir /s \ >AllFiles.txt

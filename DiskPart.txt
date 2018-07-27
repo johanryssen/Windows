@@ -1,0 +1,38 @@
+Grow VM disk on Windows server.
+
+--NTFS-- windows exapnd disk - Microsoft.exe 'diskpart'
+
+select disk 0 expand
+-------------
+list disk
+select disk 0
+list partition
+...
+select partition 2
+list partition
+...
+create partition primary size=102400
+assign
+format fs=ntfs quick
+
+create partition extended
+create partition logical size=81920
+assign
+format fs=ntfs quick
+
+create partition logical
+assign
+format fs=fat32 quick
+
+list partition
+
+select partition 1
+active
+
+list volume
+
+-------------------
+
+* Partition 4 ...
+extend size=10240
+

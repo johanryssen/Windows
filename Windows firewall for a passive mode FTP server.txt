@@ -1,0 +1,2 @@
+Windows firewall for a passive mode FTP server
+netsh advfirewall set global StatefulFTP disable

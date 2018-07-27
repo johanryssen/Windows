@@ -1,0 +1,6 @@
+Use ALT+TAB to switch to the off-screen application.
+Press ALT-SPACE to bring up the system menu (you won't see it because it is off screen)
+Press R to select the "Restore" menu choice to ensure the windows isn't is maximized (you can not move it if it is maximized)
+Press ALT-SPACE again, then M to select the "Move" menu choice.
+Press one of the arrow keys to initiate the movement.
+Now just use the mouse to place the window where you want.

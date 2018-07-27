@@ -1,0 +1,4 @@
+Show vDesktops:      Win + Tab
+Add new vDesktop:    Win + Ctrl + D
+Switch vDesktops:    Win + Ctrl + Left Arrow
+Switch vDesktops:    Win + Ctrl + Right Arrow

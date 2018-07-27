@@ -1,0 +1,3 @@
+To defer update the best solution is to stop Update Service:
+cmd> sc stop wuauserv
+cmd> sc config wuauserv start= disabled
