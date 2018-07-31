@@ -1,0 +1,3 @@
+# View Linux logs from Windows
+# Required: PuTTY PSCP installed
+pscp root@<IPADDRESS>:/var/log/messages messages
