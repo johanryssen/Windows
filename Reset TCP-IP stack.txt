@@ -1,0 +1,22 @@
+netsh int ip reset c:\resetlog.txt
+
+When you run the reset command, it rewrites two registry keys that are used by TCP/IP.
+This has the same result as removing and reinstalling the protocol.
+The reset command rewrites the following two registry keys:
+
+SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\
+SYSTEM\CurrentControlSet\Services\DHCP\Parameters\
+
+To run the manual command successfully, you must specify a file name for the log, in which the actions that netsh takes will be recorded.
+When you run the manual command, TCP/IP is reset and the actions that were taken are recorded in the log file, known as resetlog.txt in this article.
+
+-or-
+
+1. right click computer
+2. manage
+3. Device manager - double click
+4. network adapters
+5. Nvidia nForce 10/100/1000 Mbps Ethernet (i am using nforce 15.51 Ethernet drivers atm) right click
+6. Properties for the adapter that you are using be it one or two
+7. Advanced
+8. Receive Side Scaling - (disabled!!!!!! not enabled) this is most important.

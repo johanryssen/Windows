@@ -1,0 +1,12 @@
+Some authors (for example, of forms to be filled out) "lock" their documents under Windows.
+This is annoying, as it prevents you from fixing errors or adding anything to the document.
+
+1. Open your document in Word, then use "Save as..." to save it in ".xml" format.
+2. Open the .xml file in wordpad, notepad, emacs, or other text editor of your choice.
+3. Search for the string w:enforcement="1" (or w:enforcement="on").
+4. Replace the "1" with a "0" (or replace "on" with "off") to disable enforcement. (This step unlocks the document.)
+5. Save the .xml document from your text editor.
+6. Open the .xml document in Word.
+7. Choose "Save as..." and save it as a .doc or .docx file.
+
+Your original Word document can now be edited normally.

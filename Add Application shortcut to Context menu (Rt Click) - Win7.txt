@@ -1,0 +1,12 @@
+[1] regedit
+[2] goto: HKEY_CLASSES_ROOT\Directory\Background\shell
+[3] Create a new key underneath the shell key
+[4] The name should be what is going to show up on the desktop menu.
+[5] Right-click on the “shell” key, and then choose New \ Key from the menu.
+[6] Give the new key the name that you want to show up on the desktop context menu. (eg. Notepad)
+[7] Create the command key that will hold the command used to launch the application.
+[8] Right-click on the new Notepad key, and then choose New \ Key from the menu.
+[9] Give this key the name “command” in lowercase.
+[10] Find/copy full path to the application that you want to launch.
+[11] Click on “command” on the left side, and then double-click on the (Default) key in the right side to edit the string value.
+[12] Paste in the full path to the executable that you got from [10] above - Put the full path in " ".

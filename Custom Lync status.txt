@@ -1,0 +1,43 @@
+http://technet.microsoft.com/en-us/library/gg398997.aspx
+
+[1]     Create a XML file on your desktop using your favourite text editor and call it Presence.xml.
+
+[2]     Paste the following text into that file, making sure you don’t get smart quotes by accident.
+
+     <?xml version="1.0"?>
+     <customStates
+     xmlns="http://schemas.microsoft.com/09/2005/communicator/customStates"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://schemas.microsoft.com/09/2005/communicator/customStates"
+     >
+             <customState ID="1" availability="online">
+                      <activity LCID="1033">TeleCommute</activity>
+             </customState>
+             <customState ID="2" availability="busy">
+                      <activity LCID="1033">In a WebEx meeting</activity>
+             </customState>
+                <customState ID="2" availability="busy">
+                      <activity LCID="1033">Change Control</activity>
+             </customState>
+     </customStates>
+
+[3] Launch REGEDIT
+     Navigate to: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Communicator
+
+[4]     First, you will need to tell Lync it can accept a Presence.xml file without using HTTPS.
+     Create a REG_DWORD called EnableSIPHighSecurityMode.
+     Set that value to 0.
+     If you already have that string present, just edit the value to 0.
+
+[5]     Next create a REG_SZ (string value) called CustomStateURL
+     Give it a value of:
+     "C:\Program Files\Microsoft Lync\Presence.xml" if you are running 64bit
+     "C:\Program Files (x86)\Microsoft Lync\Presence.xml”  if you are running 32bit.
+     In either case, don’t include the quotes.
+
+[6]     Then, create a REG_DWORD called EnableAppearOffline
+     Give it a value of 1.
+
+[7]     Copy the Presence.xml file to whichever path from step [5] is appropriate for you.
+
+[8]     Exit and relaunch Lync, and see your new status options.
