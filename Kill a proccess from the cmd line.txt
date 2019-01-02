@@ -1,0 +1,29 @@
+Kill a proccess from the cmd line
+
+----- CMD LINE -----
+# tasklist
+# Taskkill /IM <Image Name> /F
+-or-
+# Taskkill /PID <Number> /F
+eg.
+# Taskkill /IM excel.exe /F
+
+----- SHORTCUT -----
+Using TaskKill shortcut to terminate a process
+
+Right-click on an empty area on your desktop.
+
+Select New > Shortcut.
+
+In the first box of the Create Shortcut Wizard, type:
+
+taskkill.exe /f /fi "status eq not responding"
+
+Click Next.
+
+Name the shortcut: TaskKiller. Click Finish.
+
+----- BATCH SCRIPT -----
+@echo off
+taskkill.exe /f /fi “status eq not responding”
+exit
