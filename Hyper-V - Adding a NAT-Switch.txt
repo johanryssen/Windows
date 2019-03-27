@@ -1,0 +1,7 @@
+New-VMSwitch -SwitchName “NAT-Switch” -SwitchType Internal -Verbose
+
+New-NetIPAddress -IPAddress 10.10.11.1 -PrefixLength 24 -InterfaceIndex 78 –Verbose
+
+New-NetNat -Name NATNetwork -InternalIPInterfaceAddressPrefix 10.10.11.0/24 -Verbose
+
+Get-VM | Get-VMNetworkAdapter | Connect-VMNetworkAdapter –SwitchName “NAT-Switch”
