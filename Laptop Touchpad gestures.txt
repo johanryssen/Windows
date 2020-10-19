@@ -1,0 +1,11 @@
+1 tap - select
+2 tap - more cmds
+3 tap - search
+4 tap - Manage notifications
+
+2 swipe up - scroll
+2 pinch - zoom
+
+3 swipe up - recent activity
+3 swipe down - Show desktop
+3 swipe horiz - Alt+tab

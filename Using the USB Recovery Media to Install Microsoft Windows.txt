@@ -1,0 +1,8 @@
+Using the USB Recovery Media to Install Microsoft Windows
+Installing Microsoft Windows 10
+1.	Connect the USB recovery media that you created to the Dell PC where you want to install Microsoft Windows 10.
+2.	Restart the PC and when the Dell logo appears, tap F12 key until you see ‘Preparing one time boot menu’ in the top-right corner of the screen.
+3.	On the boot menu, under UEFI boot, select your USB drive and press Enter.
+4.	Select the language and keyboard layout.
+5.	On the Choose an option screen, click Troubleshoot, and then click Recover from a drive.
+6.	Follow the on-screen instructions to finish installing Microsoft Windows. The installation process will take some time and your PC may restart several times.

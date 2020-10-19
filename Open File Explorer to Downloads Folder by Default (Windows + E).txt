@@ -1,0 +1,8 @@
+Open File Explorer to Downloads Folder by Default (Windows + E)
+
+1. Run the Regedit.
+
+2. HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced
+
+3. Find the key called "LaunchTo" and set its value to "1" to open This PC, set its value data to "2" in order to open Quick Access or set it to "3" to open Downloads folder by default.
+

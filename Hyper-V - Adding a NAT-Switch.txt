@@ -1,7 +1,1 @@
-New-VMSwitch -SwitchName “NAT-Switch” -SwitchType Internal -Verbose
-
-New-NetIPAddress -IPAddress 10.10.11.1 -PrefixLength 24 -InterfaceIndex 78 –Verbose
-
-New-NetNat -Name NATNetwork -InternalIPInterfaceAddressPrefix 10.10.11.0/24 -Verbose
-
-Get-VM | Get-VMNetworkAdapter | Connect-VMNetworkAdapter –SwitchName “NAT-Switch”
+https://nathanblasac.com/enable-easy-nat-and-dhcp-connectivity-for-your-hyper-v-virtual-machines-1030a219a112?gi=90541e993c17
