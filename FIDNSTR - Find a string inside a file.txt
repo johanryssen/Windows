@@ -1,0 +1,17 @@
+# FIDNSTR - Find a string inside a file #
+
+https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/findstr
+
+# Search for 'test' in all files ending in txt:
+findstr.exe /n /s /i /p test *.txt
+
+/n - print line number
+/s - recursive search
+/i - ignore case
+/p - ignore files with non-printable characters
+
+# Output:
+<FILENAME>:<LINE_NUMBER>:<STRING>
+
+# Adding /m will just output the filename:
+findstr.exe /n /s /i /m /p todo *.txt
