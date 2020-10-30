@@ -14,4 +14,4 @@ findstr.exe /n /s /i /p test *.txt
 <FILENAME>:<LINE_NUMBER>:<STRING>
 
 # Adding /m will just output the filename:
-findstr.exe /n /s /i /m /p todo *.txt
+findstr.exe /n /s /i /m /p test *.txt
