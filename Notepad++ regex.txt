@@ -1,0 +1,35 @@
+### Remove a fixed number of characters from the beginning of each line:
+Find what:
+^.{11}(.*)$
+
+Replace with:
+$1
+
+----------
+
+### Prefix each line with a word or phrase:
+Find what:
+^
+
+Replace with:
+Some word or phrase
+
+----------
+
+### Suffix each line with a word or phrase:
+Find what:
+$
+
+Replace with:
+Some word or phrase
+
+----------
+
+### Remove duplicate rows:
+Find what:
+^(.*?)$\s+?^(?=.*^\1$)
+
+Replace with:
+Leave blank
+
+----------
