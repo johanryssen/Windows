@@ -1,0 +1,9 @@
+C:\Users\user\Downloads> certutil.exe -hashfile oldFile.bin MD5
+MD5 hash of oldFile.bin:
+917c92cf370a58053a586a994b3bfc92
+CertUtil: -hashfile command completed successfully.
+
+C:\Users\user\Downloads> certutil.exe -hashfile newFile.bin MD5
+MD5 hash of newFilebim:
+917c92cf370a58053a586a994b3bfc92
+CertUtil: -hashfile command completed successfully.
