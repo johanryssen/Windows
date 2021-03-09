@@ -1,0 +1,13 @@
+Change Filetype default icon
+
+Convert PNG > ICO: https://convertico.com/#google_vignette
+
+Regedit
+HKEY_CLASSES_ROOT\7-Zip.iso\DefaultIcon
+Add to "Value data":
+C:\Users\icons\cd.ico
+
+Logout/login
+
+
+https://www.winhelponline.com/blog/change-default-icon-file-type-windows/
