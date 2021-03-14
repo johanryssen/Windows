@@ -1,0 +1,45 @@
+# settings.json
+
+"defaultProfile": "{abc00000-0000-0000-0000-000000000001}",
+
+{
+"guid": "{abc00000-0000-0000-0000-000000000001}",
+"name": "PowerShell 7",
+"commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+"icon": "C:\\Program Files\\PowerShell\\7\\pwsh7.ico",
+"startingDirectory" : "~"
+},
+{
+"guid": "{abc00000-0000-0000-0000-000000000002}",
+"closeOnExit" : "always",
+"commandline" : "\"%PROGRAMFILES%\\git\\git-bash.exe\" --cd-to-home",
+"icon" : "%PROGRAMFILES%\\git\\mingw64\\share\\git\\git-for-windows.ico",
+"name" : "Git Bash",
+"startingDirectory" : "%USERPROFILE%",
+"background": "#012456",
+"acrylicOpacity": 0.8,
+"useAcrylic": true
+},
+{
+"guid": "{abc00000-0000-0000-0000-000000000003}",
+"closeOnExit" : "always",
+"commandline" : "C:\\cygwin64\\bin\\mintty.exe",
+"icon" : "C:\\cygwin64\\Cygwin-Terminal.ico",
+"name" : "CygWin",
+"startingDirectory" : "%USERPROFILE%",
+"background": "#012456",
+"acrylicOpacity": 0.8,
+"useAcrylic": true
+},
+
+{
+"guid": "{abc00000-0000-0000-0000-000000000004}",
+"closeOnExit" : "always",
+"commandline" : "C:\\Windows\\System32\\cmd.exe /k set PATH=C:\\Program Files (x86)\\VMware\\VMware Workstation\\;%PATH% && vctl.exe -h",
+"icon" : "%ProgramFiles(x86)%\\VMware\\VMware Workstation\\ico\\vctl.ico",
+"name" : "vctl",
+"startingDirectory" : "%USERPROFILE%",
+"background": "#012456",
+"acrylicOpacity": 0.8,
+"useAcrylic": true
+}
