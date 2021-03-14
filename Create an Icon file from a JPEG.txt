@@ -1,8 +1,13 @@
-1. Open up the Microsoft Paint and choose "File" from the toolbar menu. Next, pick "Open" and locate the JPEG file to convert to an icon.
+1. Open up the Microsoft Paint and choose "File" from the toolbar menu.
+Next, pick "Open" and locate the JPEG file to convert to an icon.
+
 2. Choose "File" from the toolbar menu and then "Save As."
+
 3. Type in the name of the file in the "File Name" drop-down list box.
 However, type ".ICO" at the end of the file name.
 Keep the "Save As Type" as JPEG. Click "Save."
 (NOTE: Do not be alarmed that you are first saving it as a JPEG type for now, because entering the ICO extension in the file name will activate the conversion.)
+
 4. Choose "File" and "Open" from the toolbar menu. Select "ICO(*.ICO)" from the "Files As Type" drop-down list box.
+
 5. Click on the icon file and press "Open."
