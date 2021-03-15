@@ -12,7 +12,8 @@
 {
 "guid": "{abc00000-0000-0000-0000-000000000002}",
 "closeOnExit" : "always",
-"commandline" : "\"%PROGRAMFILES%\\git\\git-bash.exe\" --cd-to-home",
+//"commandline" : "C:/Program Files/Git/git-bash.exe", // -or-
+"commandline" : "\"%PROGRAMFILES%\\git\\git-bash.exe\"",
 "icon" : "%PROGRAMFILES%\\git\\mingw64\\share\\git\\git-for-windows.ico",
 "name" : "Git Bash",
 "startingDirectory" : "%USERPROFILE%",

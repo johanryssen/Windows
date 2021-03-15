@@ -1,0 +1,2 @@
+PS C:\Windows\system32> wmic
+wmic:root\cli>/output:c:\AllPrograms.txt product get name,version
