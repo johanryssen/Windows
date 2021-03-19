@@ -1,4 +1,4 @@
-1. Open up the Microsoft Paint and choose "File" from the toolbar menu.
+1. Open up the MS Paint and choose "File" from the toolbar menu.
 Next, pick "Open" and locate the JPEG file to convert to an icon.
 
 2. Choose "File" from the toolbar menu and then "Save As."
