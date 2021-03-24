@@ -1,4 +1,4 @@
-### Remove a fixed number of characters from the beginning of each line:
+### Remove a fixed number of characters from the BEGINNING of each line:
 ## Find what:
 ^.{11}(.*)$
 
@@ -6,6 +6,64 @@
 $1
 
 ----------
+
+---untested---
+### Remove a fixed number of characters from the END of each line:
+## Find what:
+.{13}$
+
+##Replace with:
+-Leave blank-
+
+Search mode: Regular expression
+Uncheck "Matches Newline"
+
+
+
+----------
+
+---untested---
+## Delete characters that exceed the number of characters
+## Find what:
+^.{19}\K.*$
+
+## Replace with:
+-Leave blank-
+
+Search mode: Regular expression
+Uncheck "Matches Newline"
+
+Delete the characters that exceed 19 characters in each line:
+
+::Before::
+The Quick Brown Fox is lazy
+The Quick Brown Fox is very cute
+
+::After::
+The Quick Brown Fox
+The Quick Brown Fox
+
+----------
+
+---untested---
+### Remove text after a specific character or word:
+## Find what: -.*
+
+## Replace with
+-Leave blank-
+
+Search mode: Regular expression
+Uncheck "Matches Newline"
+
+::Before::
+something.txt - from home folder
+
+::After::
+something.exe 
+
+
+----------
+
 
 ### Prefix each line with a word or phrase:
 ## Find what:
@@ -30,6 +88,6 @@ Some word or phrase
 ^(.*?)$\s+?^(?=.*^\1$)
 
 # Replace with:
-Leave blank
+-Leave blank-
 
 ----------
