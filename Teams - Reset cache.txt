@@ -1,0 +1,21 @@
+Delete:
+C:\Users\jo\AppData\Roaming\Microsoft\Teams
+
+-or-
+
+Powershell:
+
+If(!(Get-Process -ProcessName Teams)){
+    # Teams is not running. Do nothing and continue.
+}Else{
+    # Teams is running. Attempt to stop the process.
+    Stop-Process -Name Teams
+    # Allows a few seconds for Teams to close before continuing.
+    Sleep -Seconds 3
+}
+
+# Delete Microsoft Teams Cache for All Users (Local Computer).
+Get-ChildItem "C:\Users\*\AppData\Roaming\Microsoft\Teams\*" -directory | `
+    Where name -in ('application cache','blob storage','databases','GPUcache','IndexedDB','Local Storage','tmp') | `
+    ForEach{Remove-Item $_.FullName -Recurse -Force}
+	
