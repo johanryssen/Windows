@@ -1,0 +1,48 @@
+# View:
+Get-ExecutionPolicy -list
+
+
+
+# Error:
+"...running scripts is disabled on this system"
+When you try to run a PowerShell with an execution policy set to:
+- Restricted
+- Remote Signed or
+- All Signed
+
+
+# Fix:
+Set-ExecutionPolicy RemoteSigned
+
+
+---------------
+
+
+# RESTRICTED
+Restricted is the default policy set for Windows client computers.
+If you are using PowerShell for the first time, your default policy would probably be set to restrict all the scripts.
+You can still execute individual commands in a terminal, but not a script file.
+The restriction includes any file ending with .ps1xml, .psm1 or .ps1.
+
+
+# UNRESTRICTED
+Unrestricted allows you to run any script however, it warns you before execution if the script is downloaded from the internet.
+This policy is usually the default for any non-windows devices.
+
+
+# REMOTE SIGNED
+Remote Signed policy allows you to run any script that is either
+(a) digitally signed or 
+(b) any script written on your local computer with or without a signature.
+
+If a script is downloaded from the internet and not signed, you would need to unblock the file.
+You can do so by right-clicking on the file and choosing Properties.
+Or, you could use the Unblock-File PowerShell cmdlet for that particular script file.
+
+Using a Remote signed policy would be an ideal option when running a script downloaded from the internet.
+
+
+# ALL SIGNED
+All signed requires all the scripts to be signed digitally by a trusted publisher.
+This includes the scripts downloaded from the internet and written locally on your computer.
+
