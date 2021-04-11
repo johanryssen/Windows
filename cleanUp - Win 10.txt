@@ -1,0 +1,21 @@
+# ShortCut:
+C:\Windows\System32\taskkill.exe /f /fi "status eq not responding"
+
+----------
+
+# Create Batch file: Reset_and_Clear_Recent_Items.bat
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\*
+
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
+
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*
+
+taskkill /f /im explorer.exe
+
+start explorer.exe
+
+----------
+
+# Clear Teams Cache:
+Delete: C:\Users\jo\AppData\Roaming\Microsoft\Teams\
+
