@@ -1,0 +1,54 @@
+--- Install OpenSSH Server on Windows 10 ---
+
+# Check if OpenSSH is available:
+Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+
+# Install:
+Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+# Start OpenSSH server:
+# Start the sshd service
+Start-Service sshd
+
+# OPTIONAL but recommended:
+Set-Service -Name sshd -StartupType 'Automatic'
+
+# Confirm the firewall rule is configured. It should be created automatically by setup.
+Get-NetFirewallRule -Name *ssh*
+
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
+# If the firewall does not exist, create one
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+
+# Connect
+ssh username@localhost
+
+
+--- Uninstall ---
+
+Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+
+
+
+--- Set default shell ---
+
+(1) Confirm that the OpenSSH installation folder is on the system path.
+(SystemDrive:WindowsDirectory\System32\openssh).
+
+# cmd.exe:		path
+# PowerShell:	$env:path
+
+Configuring the default ssh shell is done in the Windows registry by adding the full path to the shell executable to Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH in the string value DefaultShell.
+
+(2) Set default shell to PowerShell.exe:
+
+PS> New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
+
+
+
+--- sshd_config ---
+
+C:\ProgramData\ssh\sshd_config
+
