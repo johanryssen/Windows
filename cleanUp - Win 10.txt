@@ -1,4 +1,4 @@
-# ShortCut:
+# ShortCut - Kill non-responding
 C:\Windows\System32\taskkill.exe /f /fi "status eq not responding"
 
 ----------
@@ -16,6 +16,15 @@ start explorer.exe
 
 ----------
 
+%localappdata% = C:\Users\jo\AppData\Local
+%appdata% = C:\Users\jo\AppData\Roaming
+
 # Clear Teams Cache:
 Delete: C:\Users\jo\AppData\Roaming\Microsoft\Teams\
 
+# Clear Office Cache
+C:\Users\jo\AppData\Local\Microsoft\Office\16.0\OfficeFileCache
+C:\Users\jo\AppData\Local\Microsoft\Office\16.0\TapCache
+
+REGEDIT> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Identities\*
+REGEDIT> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Profiles\*
