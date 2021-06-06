@@ -16,15 +16,16 @@ start explorer.exe
 
 ----------
 
-%localappdata% = C:\Users\jo\AppData\Local
-%appdata% = C:\Users\jo\AppData\Roaming
+%localappdata% = C:\Users\USER\AppData\Local
+%appdata% = C:\Users\USER\AppData\Roaming
 
 # Clear Teams Cache:
-Delete: C:\Users\jo\AppData\Roaming\Microsoft\Teams\
+Delete: C:\Users\USER\AppData\Roaming\Microsoft\Teams\
 
 # Clear Office Cache
-C:\Users\jo\AppData\Local\Microsoft\Office\16.0\OfficeFileCache
-C:\Users\jo\AppData\Local\Microsoft\Office\16.0\TapCache
+C:\Users\USER\AppData\Local\Microsoft\Office\16.0\OfficeFileCache
+C:\Users\USER\AppData\Local\Microsoft\Office\16.0\TapCache
 
-REGEDIT> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Identities\*
-REGEDIT> Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Profiles\*
+# REGEDIT:
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Identities\*
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Profiles\*
