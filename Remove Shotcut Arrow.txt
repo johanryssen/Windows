@@ -1,0 +1,13 @@
+REGEDIT: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer
+
+Right click on \Explorer > New > Key
+Name = Shell Icons
+
+Right pane of Shell Icons >
+Right click empty area > New > String Value
+Name = 29
+
+Value data box
+%windir%\System32\shell32.dll,-50
+
+Reboot

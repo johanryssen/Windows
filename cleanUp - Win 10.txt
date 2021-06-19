@@ -1,30 +1,43 @@
-# ShortCut - Kill non-responding
-C:\Windows\System32\taskkill.exe /f /fi "status eq not responding"
+----- Pre-Work -----
+# Create set of items to clean:
+c:\windows\system32\cleanmgr.exe /dc /sageset: 1
 
-----------
+# Clean the items specified by sageset:
+c:\windows\system32\cleanmgr.exe /dc /sagerun: 1
 
-# Create Batch file: Reset_and_Clear_Recent_Items.bat
+----- Batch Script -----
+# Create Batch file: cleanUpWin10.bat
+
+c:\windows\system32\cleanmgr.exe /dc /sageset: 1
+
 del /F /Q %APPDATA%\Microsoft\Windows\Recent\*
 
 del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
 
 del /F /Q %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*
 
+del /F /Q %APPDATA%\Microsoft\Teams\*
+
+del /F /Q %LOCALAPPDATA%\Microsoft\Office\16.0\OfficeFileCache\*
+
+del /F /Q %LOCALAPPDATA%\Microsoft\Office\16.0\TapCache\*
+
+del /F /Q C:\Windows\Prefetch\*
+
 taskkill /f /im explorer.exe
 
 start explorer.exe
 
-----------
+
+
+
+------ ShortCut - Kill non-responding -----
+C:\Windows\System32\taskkill.exe /f /fi "status eq not responding"
+
+----------------------------------------
 
 %localappdata% = C:\Users\USER\AppData\Local
 %appdata% = C:\Users\USER\AppData\Roaming
-
-# Clear Teams Cache:
-Delete: C:\Users\USER\AppData\Roaming\Microsoft\Teams\
-
-# Clear Office Cache
-C:\Users\USER\AppData\Local\Microsoft\Office\16.0\OfficeFileCache
-C:\Users\USER\AppData\Local\Microsoft\Office\16.0\TapCache
 
 # REGEDIT:
 Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\Identity\Identities\*
