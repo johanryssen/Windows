@@ -1,0 +1,16 @@
+## SSH KEYS ##
+
+REGEDIT:
+Computer\HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\SshHostKeys
+
+CMD:
+reg delete HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\SshHostKeys /v ssh-ed25519@22:172.16.11.130 /f
+
+
+## RDP ##
+
+REGEDIT:
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\LocalDevices
+Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Servers
+
+"reg delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Servers" /f

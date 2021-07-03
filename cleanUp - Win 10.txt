@@ -14,7 +14,7 @@ del /F /Q %LOCALAPPDATA%\Microsoft\Office\16.0\OfficeFileCache\*
 del /F /Q %LOCALAPPDATA%\Microsoft\Office\16.0\TapCache\*
 del /F /Q C:\Windows\Prefetch\*
 
-c:\windows\system32\cleanmgr.exe /dc /sageset: 1
+c:\windows\system32\cleanmgr.exe /dc /sagerun: 1
 
 taskkill /f /im explorer.exe
 
