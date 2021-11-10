@@ -1,0 +1,7 @@
+%HOMEPATH%/.gvimrc
+
+set paste
+colo desert
+autocmd FileType yaml setlocal ai et sw=2 ts=2
+set cursorcolumn cursorline
+set guifont=Lucida_Console:h13:cANSI:qDRAFT

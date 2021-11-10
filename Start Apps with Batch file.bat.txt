@@ -1,0 +1,12 @@
+@echo off
+
+cd C:\Users\jo\AppData\Local\Obsidian\
+start Obsidian.exe
+
+cd C:\Program Files\Mozilla Firefox\
+start firefox -new-tab "https://en.wikipedia.org/"
+
+cd C:\Program Files\PuTTY\
+start putty.exe -load "lab01"
+
+exit

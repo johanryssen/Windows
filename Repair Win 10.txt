@@ -1,0 +1,8 @@
+# Quick check:
+DISM /Online /Cleanup-Image /CheckHealth
+
+# Advanced DISM scan:
+DISM /Online /Cleanup-Image /ScanHealth
+
+# Repair Windows 10 image:
+DISM.exe /Online /Cleanup-image /Restorehealth

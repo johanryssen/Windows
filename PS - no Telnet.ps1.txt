@@ -1,3 +1,6 @@
+# 1. Create the Power Shell sctript in "C:\Users\USER\Documents\WindowsPowerShell"
+# 2. Run from PowerShell ISE.
+
 [CmdletBinding()]
 Param(
   [Parameter(Mandatory=$True,Position=1)]
@@ -15,7 +18,7 @@ else {
     Return "Connection Failed"
 }
 
-## Usage:
+## CLI Usage:
 ## PS C:\> telnet.ps1 -ip 8.8.8.8 -port 53
 ## or
 ## PS C:\> telnet.ps1 8.8.8.8 53

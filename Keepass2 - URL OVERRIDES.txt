@@ -1,0 +1,6 @@
+# Keepass2 - URL OVERRIDES
+## ssh
+cmd://"C:\Program Files\PuTTY\putty.exe" -ssh {USERNAME}@{URL:RMVSCM}
+
+## rdp
+cmd:// cmd /c "cmdkey /generic: TERMSRV/{URL:RMVSCM} /user:{USERNAME} /pass:{PASSWORD} && mstsc /v:{URL:RMVSCM} && timeout /t 5 /nobreak && /delete:TERMSRV/{URL:RMVSCM}"

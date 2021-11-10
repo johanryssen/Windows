@@ -1,0 +1,12 @@
+1. Open a PowerShell session and run:
+notepad $profile
+
+2. Copy and paste the following code into the file:
+
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
+
+3. Restart PowerShell

@@ -1,0 +1,7 @@
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Command Processor\CompletionChar = 9
+-or-
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor\CompletionChar = 9
+
+-or-
+1. Open cmd.exe
+2. cmd /f

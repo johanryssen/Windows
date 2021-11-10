@@ -1,0 +1,8 @@
+# SSH + password:
+"C:\Program Files\PuTTY\putty.exe" -ssh dbuser@dbserver.test.lab -pw myP@ssword123
+
+# Load a Saved Session:
+"C:\Program Files\PuTTY\putty.exe" -load "DBServer"
+
+# Load a Saved Session + Username + Password
+"C:\Program Files\PuTTY\putty.exe" -load "DBServer" -l "dbuser3@dbserver.test.lab" -pw "myP@ssword123"
