@@ -1,0 +1,17 @@
+VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+
+VLOOKUP(E1,A2:B6,2,FALSE)
+
+E1 = Look up this VALUE
+A2:B6 = In this RANGE
+2 = Return a match from this COLUMN
+FALSE = Search for exact match
+
+
+RULE OF THUMB
+Lock table array with absolute cell references (like $A$2:$C$11) to prevent it from changing when copying a formula to other cells.
+
+The lookup value in most cases should be a relative reference (like E2) or you can lock only the column coordinate ($E2).
+When the formula gets copied down the column, the reference will adjust automatically for each row.
+
+
